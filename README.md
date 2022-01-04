@@ -29,8 +29,9 @@ FACTOR: int = 5  # just an example of a number
 ```bash
 python3 pixel_art_map/main.py
 ```
-The output will be inside the `output/` folder and it'll be another folder with the same name of your image. This folder should contain a `.csv` file where each cell corresponds to a block. Place the blocks by going cell by cell and in the end you'll have your pixel art.
-The folder will also have a `.txt` file with metadata about the pixel art, such as a total of all the blocks you'll use and a total by column of the blocks you'll use in them, so that you know how to organize your inventory.
+The output will be inside the `output/` folder and it'll be another folder with the same name of your image. This folder should contain a `map.csv` file where each cell corresponds to a block. Place the blocks by going cell by cell and in the end you'll have your pixel art.
+The folder will also have a `metadata.txt` file with metadata about the pixel art, such as a total of all the blocks you'll use and a total by column of the blocks you'll use in them, so that you know how to organize your inventory. Besides that, a `commands.txt` file will also be generated and it will contain the minecraft commands to generate the pixel art quicker than placing the blocks by hand.
+
 ## How the code works
 1. A 2D array is made with each cell correponding to a pixel and its value as that pixel's RGB tuple;
 2. I load blocks.json in a DataFrame. In it is the information of the RGB color that each block assume when looked at in a map.
