@@ -9,7 +9,7 @@ Assuming you have `python >= 3.9` and `pipenv` installed:
 ```bash
 # Cloning the repo 
 git clone https://github.com/Eric-Mendes/pixel-art-map.git
-cd pixel-art-map.git/
+cd pixel-art-map/
 
 # Opening the environment and installing the dependencies
 pipenv shell
