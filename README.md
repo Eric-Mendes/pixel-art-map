@@ -1,4 +1,6 @@
 # pixel-art-map
+> Special thanks to everyone that contributed to the commands file feature @ https://stackoverflow.com/questions/70512775/how-to-group-elements-in-dataframe-by-row/70546452#70546452
+
 Maps an image to a minecraft pixel art.
 
 ![Screenshot from 2021-11-16 20-57-54](https://user-images.githubusercontent.com/42689328/142089983-a6928eda-d1be-42cf-ae2e-3733794a7019.png)
