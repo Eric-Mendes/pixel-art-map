@@ -41,4 +41,4 @@ if __name__ == "__main__":
     image_name = os.path.splitext(image_name)[0]  # same as above but without extension
     with suppress(FileExistsError):
         os.mkdir(f"output/{image_name}")
-    pd.DataFrame(result).to_csv(path_or_buf=f"output/{image_name}/{image_name}.csv", index=False, header=False)
+    pd.DataFrame(result).to_csv(path_or_buf=f"output/{image_name}/map.csv", index=False, header=False)
