@@ -94,7 +94,7 @@
             "109",
             "77"
         ],
-        "blocks": "minecraft:dirt, minecraft:coarse_dirt, minecraft:farmland, minecraft:dirt_path, minecraft:granite_slab, minecraft:granite_stairs, minecraft:granite_wall, minecraft:polished_granite_slab, minecraft:polished_granite_stairs, minecraft:jungle_planks, minecraft:jungle_log[axis=y], minecraft:stripped_jungle_log[axis=x], minecraft:jungle_wood, minecraft:stripped_jungle_wood, minecraft:jungle_sign, minecraft:jungle_pressure_plate, minecraft:jungle_trapdoor, minecraft:jungle_stairs, minecraft:jungle_slab, minecraft:jungle_fence_gate, minecraft:jungle_fence, minecraft:jungle_door, minecraft:jukebox, minecraft:brown_mushroom_block, minecraft:rooted_dirt, minecraft:hanging_roots"
+        "blocks": "minecraft:coarse_dirt, minecraft:dirt, minecraft:farmland, minecraft:dirt_path, minecraft:granite_slab, minecraft:granite_stairs, minecraft:granite_wall, minecraft:polished_granite_slab, minecraft:polished_granite_stairs, minecraft:jungle_planks, minecraft:jungle_log[axis=y], minecraft:stripped_jungle_log[axis=x], minecraft:jungle_wood, minecraft:stripped_jungle_wood, minecraft:jungle_sign, minecraft:jungle_pressure_plate, minecraft:jungle_trapdoor, minecraft:jungle_stairs, minecraft:jungle_slab, minecraft:jungle_fence_gate, minecraft:jungle_fence, minecraft:jungle_door, minecraft:jukebox, minecraft:brown_mushroom_block, minecraft:rooted_dirt, minecraft:hanging_roots"
     },
     {
         "color_name": "STONE",
