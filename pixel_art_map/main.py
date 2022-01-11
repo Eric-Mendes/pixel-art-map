@@ -28,7 +28,7 @@ def script(df, **kwargs):
             s[ix_name] = r['first']
             e[ix_name] = r['last']
             material = df.loc[r['first'], i]
-            yield f'/fill {s["x"] + player_pos[0]} {0 + player_pos[1]} {s["z"] + player_pos[2]} {e["x"] + player_pos[0]} {0 + player_pos[1]} {e["z"] + player_pos[2]} {material.split(",")[0].strip()}'
+            yield f'fill {s["x"] + player_pos[0]} {0 + player_pos[1]} {s["z"] + player_pos[2]} {e["x"] + player_pos[0]} {0 + player_pos[1]} {e["z"] + player_pos[2]} {material.split(",")[0].strip()}'
 
 
 if __name__ == "__main__":
@@ -95,6 +95,24 @@ if __name__ == "__main__":
     with open(f"output/{image_name}/metadata.txt", 'w') as file:
         file.write(txt)
 
+    pack_mcmeta ={"pack": {"pack_format": 8,"description": f"This datapack will generate the image ({image_name}) in your world"}}
+    load_json ={"values": ["pixelart-map:load"]}
+    tick_json ={"values": ["pixelart-map:tick"]}
+
+    datapack_path = f"output/{image_name}/datapack/{image_name}-PAM"
+    with suppress(FileExistsError):
+        os.makedirs(f"{datapack_path}/data/minecraft/tags/functions")
+        os.makedirs(f"{datapack_path}/data/pixelart-map/functions")
+    with open(f"{datapack_path}/pack.mcmeta", "w") as outfile:
+        json.dump(pack_mcmeta, outfile)
+    with open(f"{datapack_path}/data/minecraft/tags/functions/load.json", "w") as outfile:
+        json.dump(load_json, outfile)
+    with open(f"{datapack_path}/data/minecraft/tags/functions/tick.json", "w") as outfile:
+        json.dump(tick_json, outfile)
+    
+    with open(f"{datapack_path}/data/pixelart-map/functions/tick.mcfunction", "w") as outfile:
+        json.dump( "", outfile)
+
     # label the axes
     df = df.rename_axis(index='z', columns='x')
 
@@ -102,41 +120,5 @@ if __name__ == "__main__":
     a = list(script(df, player_x=int(default_configs["player_x"]), player_y=int(default_configs["player_y"]), player_z=int(default_configs["player_z"])))
     b = list(script(df.T, player_x=int(default_configs["player_x"]), player_y=int(default_configs["player_y"]), player_z=int(default_configs["player_z"])))
     res = min([a, b], key=len)
-
-    with open(f"output/{image_name}/commands.txt", 'w') as file:
+    with open(f"{datapack_path}/data/pixelart-map/functions/load.mcfunction", 'w') as file:
         file.write('\n'.join(res))
-
-    if default_configs.getboolean("auto_build"):
-        time.sleep(5)
-        with open(f"output/{image_name}/commands.txt", 'r') as file:
-            lines = file.readlines()
-
-            time.sleep(5)
-            pyautogui.keyDown('alt')
-            time.sleep(5)
-            pyautogui.press('tab')
-            time.sleep(5)
-            pyautogui.keyUp('alt')
-            time.sleep(5)
-            pyautogui.click(x=729, y=277)
-            time.sleep(5)
-
-            for i, line in enumerate(lines):
-                print(f"Starting command {i}/{len(lines)}...")
-                clipboard.copy(line)
-
-                time.sleep(2)
-                pyautogui.press('t')
-                time.sleep(2)
-                pyautogui.press('backspace')
-                time.sleep(2)
-                pyautogui.keyDown('ctrl')
-                time.sleep(2)
-                pyautogui.press('v')
-                time.sleep(2)
-                pyautogui.keyUp('ctrl')
-                time.sleep(2)
-                pyautogui.press('enter')
-
-                print(f"Command {i} done.\n")
-                
