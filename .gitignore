@@ -164,6 +164,8 @@ cython_debug/
 
 # pixel-art-map project specific folders
 images/*
+!images/naruto.png
 output/*
+!output/naruto
 
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode
