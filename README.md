@@ -31,11 +31,11 @@ Essentially all you need is to get your image ready and tweak the parameters on 
 
     - `factor=15`
 
-        - *What's the best factor for your image? You have to find that out by trying different numbers when you resize it.
+        - *What's the best factor for your image? You have to find that out by trying different numbers when you resize it.*
 
 4. `player_x`, `player_y` and `player_z`: the player's position.
 
-5. `auto_build` assumes True or False. By default it is False, which means: do not build automatically.
+5. `auto_build` assumes True or False. By default it is False, which means: do not build automatically. More information below.
 
 6. From source, run the code (keep in mind that you need to be inside the pipenv shell):
 ```bash
@@ -43,6 +43,15 @@ python3 pixel_art_map/main.py
 ```
 The output will be inside the `output/` folder and it'll be another folder with the same name of your image. This folder should contain a `map.csv` file where each cell corresponds to a block. Place the blocks by going cell by cell and in the end you'll have your pixel art.
 The folder will also have a `metadata.txt` file with metadata about the pixel art, such as a total of all the blocks you'll use and a total by column of the blocks you'll use in them, so that you know how to organize your inventory. Besides that, a `commands.txt` file will also be generated and it will contain the minecraft commands to generate the pixel art quicker than placing the blocks by hand.
+
+## How to use `auto_build`
+For development purposes, the `auto_build` feature was introduced. You can still use it for non-dev stuff, but it is disabled by default.
+
+It's code is not complicated at all: it is essentially an iterative interaction with minecraft using `pyautogui`.
+
+To use this feature you should first load into your world, pause, then open the terminal where you'll execute this python script and only then you run it.
+
+<strong>IMPORTANT: </strong>if anything goes wrong `Ctrl+c` tends to terminate a running script. At least on Ubuntu I guarantee it works.
 
 ## How the code works
 1. A 2D array is made with each cell correponding to a pixel and its value as that pixel's RGB tuple;
