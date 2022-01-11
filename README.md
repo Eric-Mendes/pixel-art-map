@@ -1,9 +1,8 @@
 # pixel-art-map
-> Special thanks to everyone that contributed to the commands file feature @ https://stackoverflow.com/questions/70512775/how-to-group-elements-in-dataframe-by-row/70546452#70546452
-
 Maps an image to a minecraft pixel art.
 
-![Screenshot from 2021-11-16 20-57-54](https://user-images.githubusercontent.com/42689328/142089983-a6928eda-d1be-42cf-ae2e-3733794a7019.png)
+![Screenshot from 2022-01-10 23-48-04](https://user-images.githubusercontent.com/42689328/148878465-8603eb13-6fc0-4b2e-a88d-04dfdce41110.png)
+
 ## Setting up the development environment
 Assuming you have `python >= 3.9` and `pipenv` installed:
 ```bash
@@ -58,3 +57,5 @@ To use this feature you should first load into your world, pause, then open the 
 2. I load blocks.json in a DataFrame. In it is the information of the RGB color that each block assume when looked at in a map.
 3. I abstract the RGB tuples as a point in a 3D space with x, y and z;
 4. In the end I calculate the lowest euclidian distance between a pixel's tuple and each blocks tuple to decide which block to use to determine which block to use to represent that pixel.
+
+<p align="right">Special thanks to everyone that contributed to the commands file feature @ https://stackoverflow.com/questions/70512775/how-to-group-elements-in-dataframe-by-row/70546452#70546452</p>
