@@ -167,5 +167,6 @@ images/*
 !images/naruto.png
 output/*
 !output/naruto
+pixel_art_map/config.ini
 
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode
