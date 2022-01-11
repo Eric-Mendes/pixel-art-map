@@ -16,16 +16,28 @@ pipenv shell
 pipenv install
 ```
 ##  Running the project
-1. Get any image you want and put it inside the `images/` folder;
-2. Correctly pass the path to the image_name string on this line:
-```python
-image_name = "my_image_name.png"  # it should have the extension with it
-```
-3. Lower the dimensions a little by a factor so that you don't have too much work to do (you'll place the blocks by hand or command):
-```python
-FACTOR: int = 5  # just an example of a number
-```
-4. From source, run the code (keep in mind that you need to be inside the pipenv shell):
+Essentially all you need is to get your image ready and tweak the parameters on the `pixel_art_map/config.ini` file. No manipulation of the `main.py` file is necessary.
+
+1. Get any image you want and put it inside the `images/` folder <strong>OR</strong> copy the url of an image on the internet;
+
+    - <strong>IMPORTANT:</strong> passing an url will download the image into the `images/` folder. If you think that some url looks sketchy, do <strong>not</strong> use it.
+
+2. Correctly pass the path or the url to the image string: 
+
+    - `image=naruto.png` <strong>or</strong>
+    - `image=https://media.geeksforgeeks.org/wp-content/uploads/20210318103632/gfg-300x300.png` (*just an example of an url*)
+
+3. Lower the dimensions a little by a factor (<strong>a big pixel art takes a long time to build. Naruto's was made automatically and it took around 3 hours</strong>):
+
+    - `factor=15`
+
+        - *What's the best factor for your image? You have to find that out by trying different numbers when you resize it.
+
+4. `player_x`, `player_y` and `player_z`: the player's position.
+
+5. `auto_build` assumes True or False. By default it is False, which means: do not build automatically.
+
+6. From source, run the code (keep in mind that you need to be inside the pipenv shell):
 ```bash
 python3 pixel_art_map/main.py
 ```
