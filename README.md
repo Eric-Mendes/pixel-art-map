@@ -46,6 +46,7 @@ The folder will also have a `metadata.txt` file with metadata about the pixel ar
 Copy the folder inside the your images `datapack/` folder to your:
 - On Windows: `%appdata%/.minecraft/saves/map_name/datapacks`
 - On Linux: `~/.minecraft/saves/map_name/datapacks`
+
 Where `map_name` is your map's name.
 
 <p align="right"><i>Special thanks to everyone that contributed to the commands file feature @ https://stackoverflow.com/questions/70512775/how-to-group-elements-in-dataframe-by-row/70546452#70546452</i></p>
