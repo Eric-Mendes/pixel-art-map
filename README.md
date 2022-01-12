@@ -28,7 +28,7 @@ Essentially all you need is to get your image ready and tweak the parameters on 
     - `image=naruto.png` <strong>or</strong>
     - `image=https://media.geeksforgeeks.org/wp-content/uploads/20210318103632/gfg-300x300.png` (*just an example of an url*)
 
-3. Lower the dimensions a little by a factor (<strong>a big pixel art takes a long time to build.</strong>):
+3. Lower the dimensions a little by a factor (<strong>a big pixel art takes a long time to build when building block by block.</strong>):
 
     - `factor=15`
 
