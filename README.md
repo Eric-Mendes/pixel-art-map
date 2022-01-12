@@ -44,7 +44,7 @@ The folder will also have a `metadata.txt` file with metadata about the pixel ar
 
 ### Adding a datapack to your world
 Copy the folder inside the your images `datapack/` folder to your:
-- On Windows: `%appdata%/.minecraft/saves/*map_name*/datapacks`
+- On Windows: `%appdata%/.minecraft/saves/map_name/datapacks`
 - On Linux: `~/.minecraft/saves/map_name/datapacks`
 Where `map_name` is your map's name.
 
