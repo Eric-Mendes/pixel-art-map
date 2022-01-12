@@ -1,4 +1,6 @@
 # pixel-art-map
+> Contributions are welcome and appreciated. Our guidelines are at: https://github.com/Eric-Mendes/pixel-art-map/blob/main/CONTRIBUTING.md. Don't forget to check our [code of conduct](https://github.com/Eric-Mendes/pixel-art-map/blob/main/CODE_OF_CONDUCT.md) as well.
+
 Maps an image to a minecraft pixel art.
 
 ![2022-01-11_19 52 33](https://user-images.githubusercontent.com/42689328/149034162-83030e39-ac85-40a9-ad23-054c5c348880.png)
