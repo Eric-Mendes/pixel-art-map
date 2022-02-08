@@ -1,5 +1,5 @@
 # pixel-art-map
-> Contributions are welcome and appreciated. Our guidelines are at: https://github.com/Eric-Mendes/pixel-art-map/blob/main/CONTRIBUTING.md. Don't forget to check our [code of conduct](https://github.com/Eric-Mendes/pixel-art-map/blob/main/CODE_OF_CONDUCT.md) as well.
+> This repo is now archived. Please refer to https://github.com/Eric-Mendes/unexpected-isaves in case you still want to map an image to a Minecraft pixel art.
 
 Maps an image to a minecraft pixel art.
 
